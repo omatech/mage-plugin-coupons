@@ -18,7 +18,9 @@
     ],
     "require": {
         "php": "^7.1",
-        "omatech/mage": "0.1.*"
+        "omatech/mage": "0.2.*",
+        "omatech/laravel-promo-codes": "dev-master",
+        "illuminate/support": "5.8.*"
     },
     "require-dev": {
         "orchestra/testbench": "3.8.*",

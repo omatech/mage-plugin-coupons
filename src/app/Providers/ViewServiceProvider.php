@@ -22,5 +22,11 @@ class ViewServiceProvider extends ServiceProvider
     private function views()
     {
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'mage-plugin-coupons');
+
+        $this->app['view']->addNamespace('mage-plugin-coupons',  __DIR__.'/../../resources/views');
+
+        $this->publishes([
+            __DIR__.'/../../resources/js' => public_path('vendor/mage-plugin-coupons/js'),
+        ], 'public');
     }
 }

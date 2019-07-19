@@ -2,7 +2,7 @@
 
 @can('mage-plugin-coupons-zone', 'mage')
 <li class="nav-item">
-    <a href="#" class="nav-link {{ !isRoute(['mage-plugin-coupons.dashboard']) ?: 'active' }}">
+    <a href="{{ route('mage-plugin-coupons.promocodes.index') }}" class="nav-link {{ !isRoute(['mage-plugin-coupons.dashboard']) ?: 'active' }}">
         <span class="nav-icon">
             <i data-feather="message-circle"></i>
         </span>

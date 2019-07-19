@@ -1,0 +1,23 @@
+<table id="mage-promocodes-datatable" class="table table-bordered table-hover display" style="width:100%">
+    <thead>
+        <tr>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.id')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.type')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.title')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.code')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.pct_discount')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.amount_discount')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.pct_sipping_discount')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.max_uses')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.start_date')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.end_date')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.first_order_only')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.one_use_only')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.customer_one_use_only')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.active')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.action')</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>

@@ -11,7 +11,7 @@ use Omatech\MagePluginCoupons\App\Providers\MigrationServiceProvider;
 use Omatech\MagePluginCoupons\App\Providers\MiddlewareServiceProvider;
 use Omatech\MagePluginCoupons\App\Providers\ConfigurationServiceProvider;
 
-class MagePluginCoupunsServiceProvider extends ServiceProvider
+class MagePluginCouponsServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
