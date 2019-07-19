@@ -39,11 +39,11 @@ jQ(document).ready(function () {
                       "<i class=\"fa fa-pen\"></i>" +
                     "</button>" +
                   "</a>" +
-                  "<a class=\"mage-promocodes-delete-btn\" data-id=\"" + data.id + "\">" +
-                    "<button type=\"button\" data-id=\"" + data.id + "\" class=\"btn btn-default btn-sm\" data-toggle=\"tooltip\">\n" +
-                      "<i data-id=\"" + data.id + "\" class=\"fa fa-trash no-click\"></i>" +
-                    "</button>" +
-                  "</a>" +
+                  // "<a class=\"mage-promocodes-delete-btn\" data-id=\"" + data.id + "\">" +
+                  //   "<button type=\"button\" data-id=\"" + data.id + "\" class=\"btn btn-default btn-sm\" data-toggle=\"tooltip\">\n" +
+                  //     "<i data-id=\"" + data.id + "\" class=\"fa fa-trash no-click\"></i>" +
+                  //   "</button>" +
+                  // "</a>" +
                 "</div>";
                 }
             }

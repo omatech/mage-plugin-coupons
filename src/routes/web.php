@@ -19,7 +19,7 @@ Route::namespace('Omatech\MagePluginCoupons\App\Http\Controllers')
              $route->get('create', 'PromoCodeController@create')->name('create');
              $route->post('store', 'PromoCodeController@store')->name('store');
              $route->get('edit/{id}', 'PromoCodeController@edit')->name('edit');
-             $route->post('update/{id}', 'PromoCodeController@update')->name('update');
+             $route->put('update/{id}', 'PromoCodeController@update')->name('update');
              $route->get('destroy/{id}', 'PromoCodeController@delete')->name('destroy');
          });
      });

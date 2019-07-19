@@ -12,9 +12,9 @@
         <h3 class="card-title">@lang('mage.promocodes.create.title')</h3>
         <div class="card-tools"></div>
     </div>
-    <form id="mage-promocodes-form" action="{{route('mage.promocodes.store')}}" method="POST">
+    <form id="mage-promocodes-form" action="{{route('mage-plugin-coupons.promocodes.store')}}" method="POST">
         @method('POST')
-        @include('mage::pages.promocodes.forms.main')
+        @include('mage-plugin-coupons::pages.promocodes.forms.main')
     </form>
 </div>
 @endsection
