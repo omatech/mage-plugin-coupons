@@ -1,0 +1,54 @@
+{
+    "name": "omatech/mage-plugin-coupons",
+    "description": "Coupons to create new plugins for Mage",
+    "keywords": [
+        "omatech",
+        "mage",
+        "mage-plugin-coupons"
+    ],
+    "homepage": "https://github.com/omatech/mage-plugin-coupons",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Christian Bohollo",
+            "email": "cbohollo@omatech.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "omatech/mage": "0.1.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omatech\\MagePluginCoupons\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omatech\\MagePluginCoupons\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Omatech\\MagePluginCoupons\\MagePluginCouponsServiceProvider"
+            ],
+            "aliases": {
+                "MagePluginCoupons": "Omatech\\MagePluginCoupons\\MagePluginCouponsFacade"
+            }
+        }
+    }
+}
