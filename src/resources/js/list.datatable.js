@@ -1,6 +1,6 @@
 jQ(document).ready(function () {
-    let adminPromocodesDatatable = jQ('#mage-promocodes-datatable');
-    adminPromocodesDatatable.DataTable({
+    let adminPromoCodesDatatable = jQ('#mage-promocodes-datatable');
+    adminPromoCodesDatatable.DataTable({
         processing: true,
         serverSide: true,
         ajax: route('mage-plugin-coupons.promocodes.list').url(),
@@ -50,7 +50,7 @@ jQ(document).ready(function () {
         ]
     });
 
-    adminPromocodesDatatable.on('click', '.mage-promocodes-delete-btn', function(e) {
+    adminPromoCodesDatatable.on('click', '.mage-promocodes-delete-btn', function(e) {
         let id = jQ(e.target).attr('data-id');
         let locale = {
           "title"   : trans('mage-plugin-coupons.datatable.sweetalert.promocodes.title'),
@@ -59,6 +59,6 @@ jQ(document).ready(function () {
           "error"   : trans('mage-plugin-coupons.datatable.sweetalert.promocodes.error'),
         }
 
-        window.deleteAlert(id, adminPromocodesDatatable, 'mage.promocodes.destroy', locale);
+        window.deleteAlert(id, adminPromoCodesDatatable, 'mage.promocodes.destroy', locale);
     });
 });

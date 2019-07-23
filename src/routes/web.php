@@ -21,5 +21,6 @@ Route::namespace('Omatech\MagePluginCoupons\App\Http\Controllers')
              $route->get('edit/{id}', 'PromoCodeController@edit')->name('edit');
              $route->put('update/{id}', 'PromoCodeController@update')->name('update');
              $route->get('destroy/{id}', 'PromoCodeController@delete')->name('destroy');
+             $route->get('toggle/{id}', 'PromoCodeController@toggle')->name('toggle');
          });
      });

@@ -3,12 +3,12 @@
 namespace Omatech\MagePluginCoupons\App\Repositories;
 
 use Omatech\Mage\App\Repositories\BaseRepository;
-use Omatech\LaravelPromoCodes\Models\Promocode;
+use Omatech\LaravelPromoCodes\Models\PromoCode;
 
-abstract class PromocodeBaseRepository extends BaseRepository
+abstract class PromoCodeBaseRepository extends BaseRepository
 {
     public function model() : String
     {
-        return Promocode::class;
+        return PromoCode::class;
     }
 }

@@ -3,9 +3,9 @@
 namespace Omatech\MagePluginCoupons\App\Http\Controllers;
 
 use Omatech\LaravelPromoCodes\Facade\PromoCode;
-use Omatech\MagePluginCoupons\App\Http\Requests\PromocodeUpdateRequest;
-use Omatech\MagePluginCoupons\App\Http\Requests\PromocodeStoreRequest;
-use Omatech\MagePluginCoupons\App\Repositories\Promocode\ListPromocodeDatatable;
+use Omatech\MagePluginCoupons\App\Http\Requests\PromoCodeUpdateRequest;
+use Omatech\MagePluginCoupons\App\Http\Requests\PromoCodeStoreRequest;
+use Omatech\MagePluginCoupons\App\Repositories\PromoCode\ListPromoCodeDatatable;
 
 class PromoCodeController extends Controller
 {
@@ -16,7 +16,7 @@ class PromoCodeController extends Controller
         return view('mage-plugin-coupons::pages.promocodes.index');
     }
 
-    public function list(ListPromocodeDatatable $promocodeDatatable)
+    public function list(ListPromoCodeDatatable $promocodeDatatable)
     {
         return $promocodeDatatable->make();
     }
@@ -26,9 +26,9 @@ class PromoCodeController extends Controller
         return view('mage-plugin-coupons::pages.promocodes.create');
     }
 
-    public function store(PromocodeStoreRequest $request)
+    public function store(PromoCodeStoreRequest $request)
     {
-        Promocode::generate($request->all());
+        PromoCode::generate($request->all());
 
         return redirect()->route('mage-plugin-coupons.promocodes.index')->with('message', 'Promo code created successfully');
     }
@@ -40,15 +40,21 @@ class PromoCodeController extends Controller
         return view('mage-plugin-coupons::pages.promocodes.edit', compact('promocode'));
     }
 
-    public function update(PromocodeUpdateRequest $request, $id)
+    public function update(PromoCodeUpdateRequest $request, $id)
     {
-        Promocode::update($id, $request->all());
+        PromoCode::update($id, $request->all());
 
         return redirect()->route('mage-plugin-coupons.promocodes.index')->with('message', 'Promo code updated successfully');
     }
 
-    public function delete()
+    public function toggle()
     {
-//        Promocode::
+        PromoCode::setActive(!PromoCode::isActive());
+
+        if(request()->ajax()) return response(['active' => PromoCode::isActive()]);
+
+        $message = PromoCode::isActive() ? 'enabled' : 'disabled';
+
+        return redirect()->route('mage-plugin-coupons.promocodes.index')->with('message', "Promo code $message successfully");
     }
 }

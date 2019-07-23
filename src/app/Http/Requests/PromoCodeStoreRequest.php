@@ -4,7 +4,7 @@ namespace Omatech\MagePluginCoupons\App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PromocodeStoreRequest extends FormRequest
+class PromoCodeStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -36,7 +36,7 @@ class PromocodeStoreRequest extends FormRequest
             'one_use_only' => 'boolean',
             'customer_one_use_only' => 'boolean',
             'active' => 'boolean',
-            'code' => 'required|unique:promo_codes,code,'.$this->id,
+            'code' => 'required|unique:promo_codes,code'
         ];
     }
 

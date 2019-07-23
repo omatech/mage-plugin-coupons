@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Omatech\MagePluginCoupons\App\Repositories\Promocode;
+namespace Omatech\MagePluginCoupons\App\Repositories\PromoCode;
 
-use Omatech\MagePluginCoupons\App\Repositories\PromocodeBaseRepository;
+use Omatech\MagePluginCoupons\App\Repositories\PromoCodeBaseRepository;
 use Yajra\DataTables\DataTables;
 
-class ListPromocodeDatatable extends PromocodeBaseRepository
+class ListPromoCodeDatatable extends PromoCodeBaseRepository
 {
     public function make($columns =
      [
