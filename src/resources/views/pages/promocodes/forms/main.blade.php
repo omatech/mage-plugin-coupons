@@ -29,11 +29,11 @@
     </div>
     <div class="form-group">
         <label for="mage-users-start_date">@lang('mage-plugin-coupons.users.form.start_date')</label>
-        <input name="start_date" type="text" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" im-insert="true" class="form-control @if($errors->has('start_date')) is-invalid @endif" id="mage_promocodes_start_date" placeholder="@lang('mage-plugin-coupons.promocodes.form.start_date.placeholder')" value="{{ old('start_date', $promocode['start_date'] ?? '') }}">
+        <input name="start_date" type="date" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" im-insert="true" class="form-control @if($errors->has('start_date')) is-invalid @endif" id="mage_promocodes_start_date" placeholder="@lang('mage-plugin-coupons.promocodes.form.start_date.placeholder')" value="{{ old('start_date', $promocode['start_date'] ?? '') }}">
     </div>
     <div class="form-group">
         <label for="mage-users-end_date">@lang('mage-plugin-coupons.users.form.end_date')</label>
-        <input name="end_date" type="text" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" im-insert="true" class="form-control @if($errors->has('end_date')) is-invalid @endif" id="mage_promocodes_end_date" placeholder="@lang('mage-plugin-coupons.promocodes.form.end_date.placeholder')" value="{{ old('end_date', $promocode['end_date'] ?? '') }}">
+        <input name="end_date" type="date" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" im-insert="true" class="form-control @if($errors->has('end_date')) is-invalid @endif" id="mage_promocodes_end_date" placeholder="@lang('mage-plugin-coupons.promocodes.form.end_date.placeholder')" value="{{ old('end_date', $promocode['end_date'] ?? '') }}">
     </div>
     <div class="form-group">
         <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
