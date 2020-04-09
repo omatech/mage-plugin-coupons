@@ -26,7 +26,7 @@ class ListPromoCodeDatatable extends PromoCodeBaseRepository
          'active',
          'action'])
     {
-        $promocodes = $this->query()->select($columns);
+        $promocodes = $this->query()->select($columns)->orderBy('created_at', 'desc');
 
         return DataTables::of($promocodes)->make(true);
     }

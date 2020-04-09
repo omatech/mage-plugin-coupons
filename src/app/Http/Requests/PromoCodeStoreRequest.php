@@ -36,7 +36,8 @@ class PromoCodeStoreRequest extends FormRequest
             'one_use_only' => 'boolean',
             'customer_one_use_only' => 'boolean',
             'active' => 'boolean',
-            'code' => 'required|unique:promo_codes,code'
+            'code' => 'required|unique:promo_codes,code',     
+            'its_a_referral' => 'nullable'   
         ];
     }
 
