@@ -2,6 +2,7 @@
 <input type="hidden" name="one_use_only" value="0">
 <input type="hidden" name="customer_one_use_only" value="0">
 <input type="hidden" name="active" value="0">
+
 <div class="card-body">
     <div class="form-group">
         <label for="mage-users-type">@lang('mage-plugin-coupons.users.form.type')</label>
@@ -17,7 +18,11 @@
     </div>
     <div class="form-group">
         <label for="mage-users-amount_discount">@lang('mage-plugin-coupons.users.form.amount_discount')</label>
-        <input name="amount_discount" type="text" class="form-control @if($errors->has('amount_discount')) is-invalid @endif" id="mage-promocodes-amount_discount" placeholder="@lang('mage-plugin-coupons.promocodes.form.amount_discount.placeholder')" value="{{ old('amount_discount', $promocode['amount_discount'] ?? '') }}">
+        <input onfocus="discountFocus()" onblur="discountBlur()" name="amount_discount" type="text" class="form-control @if($errors->has('amount_discount')) is-invalid @endif" id="mage-promocodes-amount_discount" placeholder="@lang('mage-plugin-coupons.promocodes.form.amount_discount.placeholder')" value="{{ old('amount_discount', $promocode['amount_discount'] ?? '') }}">
+    </div>
+    <div class="form-group" id="amountDiscountByTotalPrice" style="display: none">
+        <label for="mage-users-amount_discount">@lang('mage-plugin-coupons.users.form.amount_discount_by_total_price')</label>
+        <input name="amount_discount_by_total_price" type="text" class="form-control @if($errors->has('amount_discount_by_total_price')) is-invalid @endif" id="mage-promocodes-amount_discount_by_total_price" placeholder="@lang('mage-plugin-coupons.promocodes.form.amount_discount_by_total_price.placeholder')" value="{{ old('amount_discount_by_total_price', $promocode['amount_discount_by_total_price'] ?? '') }}">
     </div>
     <div class="form-group">
         <label for="mage-users-pct_shipping_discount">@lang('mage-plugin-coupons.users.form.pct_shipping_discount')</label>
@@ -68,3 +73,38 @@
     {{ csrf_field() }}
     <button type="submit" class="btn btn-primary">@lang('mage-plugin-coupons.users.form.save')</button>
 </div>
+<script>
+    var amountDiscount = document.querySelector('input[name=amount_discount]').value;
+    var amountDiscountByTotalPrice = document.getElementById('amountDiscountByTotalPrice');
+
+    if(amountDiscount !== ""){
+        amountDiscountByTotalPrice.style.display = 'block';
+
+    }
+
+    function discountFocus() {
+        var amountDiscountByTotalPrice = document.getElementById('amountDiscountByTotalPrice');
+
+        amountDiscountByTotalPrice.style.display = 'block';
+    }
+    
+    function discountBlur() {
+        var amountDiscountByTotalPrice = document.getElementById('amountDiscountByTotalPrice');
+        var amountDiscount = document.querySelector('input[name=amount_discount]').value;
+        var amountDiscountByTotalPriceValue = document.querySelector('input[name=amount_discount_by_total_price]').value;
+
+        if(amountDiscount === ""){
+            if(amountDiscountByTotalPriceValue === ""){
+                amountDiscountByTotalPrice.style.display = 'none';
+            }else{
+                amountDiscountByTotalPrice.style.display = 'block';
+            }
+        }else{
+            amountDiscountByTotalPrice.style.display = 'block';
+        }
+    }
+
+
+   
+
+</script>

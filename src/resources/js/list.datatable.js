@@ -23,6 +23,7 @@ jQ(document).ready(function () {
             { data: 'code', name: 'code'},
             { data: 'pct_discount', name: 'pct_discount', searchable: false},
             { data: 'amount_discount', name: 'amount_discount', searchable: false},
+            { data: 'amount_discount_by_total_price', name: 'amount_discount_by_total_price', searchable: false},
             { data: 'pct_shipping_discount', name: 'pct_shipping_discount', searchable: false},
             { data: 'max_uses', name: 'max_uses', searchable: false},
             { data: 'start_date', name: 'start_date'},

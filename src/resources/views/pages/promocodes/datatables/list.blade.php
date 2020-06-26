@@ -7,6 +7,7 @@
             <th>@lang('mage-plugin-coupons.promocodes.datatable.field.code')</th>
             <th>@lang('mage-plugin-coupons.promocodes.datatable.field.pct_discount')</th>
             <th>@lang('mage-plugin-coupons.promocodes.datatable.field.amount_discount')</th>
+            <th>@lang('mage-plugin-coupons.promocodes.datatable.field.amount_discount_by_total_price')</th>
             <th>@lang('mage-plugin-coupons.promocodes.datatable.field.pct_sipping_discount')</th>
             <th>@lang('mage-plugin-coupons.promocodes.datatable.field.max_uses')</th>
             <th>@lang('mage-plugin-coupons.promocodes.datatable.field.start_date')</th>
